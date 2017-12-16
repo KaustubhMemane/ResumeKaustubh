@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navPersonalWebsite"
+        android:title="Website"
+        android:icon="@drawable/ic_personal_website"
+        />
+    <item
+        android:id="@+id/navYouTube"
+        android:title="Youtube"
+        android:icon="@drawable/ic_youtube"
+        />
+    <item
+        android:id="@+id/navLinkedIn"
+        android:title="LinkedIn"
+        android:icon="@drawable/ic_action_name"
+        />
+    <item
+        android:id="@+id/navGitHub"
+        android:title="GitHub"
+        android:icon="@drawable/icon_github"
+        />
+    <item
+        android:id="@+id/navInstagram"
+        android:title="LinkedIn"
+        android:icon="@drawable/icon_instagram"
+        />
+</menu>

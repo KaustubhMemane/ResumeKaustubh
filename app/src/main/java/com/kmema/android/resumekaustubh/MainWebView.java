@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,8 +22,7 @@ import android.widget.Switch;
 public class MainWebView extends Fragment {
 
     private WebView webViewMain;
-
-
+    private String URL="";
     @SuppressLint("SetJavaScriptEnabled")
     @Nullable
     @Override
@@ -40,7 +40,12 @@ public class MainWebView extends Fragment {
                         .getCacheDir()
                         .getAbsolutePath());
         webViewMain.setWebChromeClient(new WebChromeClient());
-        webViewMain.loadUrl(MainActivity.MAIN_URL);
+        if(getArguments()!=null)
+        {
+           URL = getArguments().getString(MainActivity.TAG_LINK);
+        }
+        Log.e("FRGAMENT URL", URL);
+        webViewMain.loadUrl(URL);
 
         webViewMain.setOnKeyListener(new View.OnKeyListener() {
             @Override
